@@ -8,7 +8,7 @@ load_dotenv()
 
 # Retrieve the API key from environment variables
 api_key = os.getenv('NARAKEET_API_KEY')
-zip_file_path = 'Script.zip'
+zip_file_path = 'movie.zip'
 
 # Step 1: Obtain upload token
 upload_token_url = 'https://api.narakeet.com/video/upload-request/zip'
@@ -51,6 +51,7 @@ build_data = {
     'repositoryType': repository_type,
     'repository': repository,
     'source': 'source.md'  # Update with the path to your script inside the ZIP
+    
 }
 build_response = requests.post(build_url, headers={
     'Content-Type': 'application/json',
@@ -86,7 +87,7 @@ while not video_url:
 # Step 5: Download the video
 video_response = requests.get(video_url)
 if video_response.status_code == 200:
-    output_file_path = 'script.mp4'
+    output_file_path = 'movie2.mp4'
     with open(output_file_path, 'wb') as video_file:
         video_file.write(video_response.content)
     print(f'Video downloaded as {output_file_path}')

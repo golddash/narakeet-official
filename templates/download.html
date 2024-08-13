@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Video</title>
-</head>
-<body>
-    <h1>Your video is ready!</h1>
-    <a href="{{ video_url }}" download>Download Video</a>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Download Video{% endblock %}
+
+{% block content %}
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md mx-auto">
+        <h2 class="text-xl font-bold mb-6 text-center">Your video is ready!</h2>
+        <a href="{{ video_url }}" download class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Download Video</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Video Generator{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-500 text-white py-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-2xl font-bold">Video Generator</h1>
+        </div>
+    </header>
+    <main class="container mx-auto py-8">
+        {% block content %}
+        <!-- Default content can go here -->
+        {% endblock %}
+    </main>
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; 2024 Video Generator. All rights reserved.</p>
+    </footer>
+</body>
+</html>

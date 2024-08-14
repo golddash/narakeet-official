@@ -19,3 +19,8 @@ You can install the required Python packages using:
 
 ```bash
 pip install -r requirements.txt
+
+Create a .env file in the root directory with the following content:
+
+```bash
+NARAKEET_API_KEY=your_api_key_here

@@ -1,3 +1,5 @@
 .env
 *.mp4
 *.zip
+source_with_images/
+output/
